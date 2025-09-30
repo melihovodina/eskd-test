@@ -1,5 +1,5 @@
 import { Router } from "express";
-import msgRoutes from "./msg.routes";
+import msgRoutes from "./message.routes";
 
 const router = Router();
 

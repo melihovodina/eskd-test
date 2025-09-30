@@ -1,0 +1,8 @@
+POST http://localhost:5000/api/messages
+Content-Type: application/json
+
+{
+    "name": "danya",
+    "phone": "+375253635127",
+    "message": "Hello world"
+}
