@@ -3,11 +3,11 @@ import { CreateMessageInput } from "../schemas/message.schema";
 import { MessageService } from "../services/message.service";
 
 export class MessageController {
-  static async createMsg(req: Request<{}, {}, CreateMessageInput>, res: Response) {
+  static async createMessage(req: Request<{}, {}, CreateMessageInput>, res: Response) {
     const { name, phone, message } = req.body;
     
     try {
-      await MessageService.createMsg(name, phone, message);
+      await MessageService.createMessage(name, phone, message);
     } catch (error: any) {
       console.error(error);
       res.status(500).json({ message: error.message || "Server error" });

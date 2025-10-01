@@ -5,6 +5,6 @@ import { createMessageSchema } from '../schemas/message.schema';
 
 const router = Router();
 
-router.post("/", validateSchema(createMessageSchema), MessageController.createMsg);
+router.post("/", validateSchema(createMessageSchema), MessageController.createMessage);
 
 export default router;

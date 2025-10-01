@@ -4,7 +4,7 @@ const messages = new Schema({
   name: {
     type: String,
     required: true,
-    minlength: 3,
+    minlength: 2,
     maxlength: 50,
   },
   phone: {
@@ -16,7 +16,7 @@ const messages = new Schema({
   message: {
     type: String,
     required: true,
-    minlength: 1,
+    minlength: 2,
     maxlength: 500,
   },
 });

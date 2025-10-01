@@ -4,7 +4,7 @@ export const createMessageSchema = z.object({
   body: z.object({
     name: z
       .string()
-      .min(3, "Name must be at least 3 characters long")
+      .min(2, "Name must be at least 2 characters long")
       .max(50, "Name must be at most 50 characters long"),
     phone: z
       .string()
@@ -14,7 +14,7 @@ export const createMessageSchema = z.object({
       ),
     message: z
       .string()
-      .min(1, "Message must be at least 1 characters long")
+      .min(2, "Message must be at least 2 characters long")
       .max(500, "Name must be at most 50 characters long")
   }),
 });
