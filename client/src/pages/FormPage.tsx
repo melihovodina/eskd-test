@@ -6,6 +6,7 @@ import Form from '../components/Form';
 import Notification from '../components/Notification';
 import { messagesApi, MessageData } from '../api/messages';
 import { validateBelarusianPhone, validateMinLength } from '../utils/validation';
+import { ArrowLeft } from 'lucide-react';
 
 interface FormErrors {
   name?: string;
@@ -83,12 +84,14 @@ export default function ContactForm({ onBack }: ContactFormProps) {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4 py-20 sm:py-8">
-      <button
-        onClick={onBack}
-        className="absolute top-4 left-4 sm:top-8 sm:left-8 px-4 py-2 sm:px-6 text-sm sm:text-base bg-white text-gray-800 border border-gray-300 rounded-lg font-medium hover:bg-gray-50 transition-colors duration-200"
-      >
-        ← Назад
-      </button>
+      <Button
+      type="button"
+      variant="primary"
+      className="absolute top-4 left-4 sm:top-8 sm:left-8  gap-2"
+      onClick={onBack}
+    >
+      <ArrowLeft className="w-5 h-5" />
+    </Button>
 
       {notification && (
         <Notification
