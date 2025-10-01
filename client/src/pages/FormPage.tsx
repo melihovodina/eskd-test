@@ -81,6 +81,13 @@ export default function ContactForm({ onBack }: ContactFormProps) {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50">
+      <button
+        onClick={onBack}
+        className="absolute top-8 left-8 px-6 py-2 bg-white text-gray-800 border border-gray-300 rounded-lg font-medium hover:bg-gray-50 transition-colors duration-200"
+      >
+        ← Назад
+      </button>
+
       {notification && (
         <Notification
           type={notification.type}
@@ -121,10 +128,6 @@ export default function ContactForm({ onBack }: ContactFormProps) {
 
         <Button type="submit" fullWidth isLoading={isSubmitting}>
           Отправить
-        </Button>
-
-        <Button type="button" variant="secondary" fullWidth onClick={onBack}>
-          Назад
         </Button>
       </Form>
     </div>
