@@ -80,10 +80,10 @@ export default function ContactForm({ onBack }: ContactFormProps) {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50">
+    <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4 py-20 sm:py-8">
       <button
         onClick={onBack}
-        className="absolute top-8 left-8 px-6 py-2 bg-white text-gray-800 border border-gray-300 rounded-lg font-medium hover:bg-gray-50 transition-colors duration-200"
+        className="absolute top-4 left-4 sm:top-8 sm:left-8 px-4 py-2 sm:px-6 text-sm sm:text-base bg-white text-gray-800 border border-gray-300 rounded-lg font-medium hover:bg-gray-50 transition-colors duration-200"
       >
         ← Назад
       </button>
