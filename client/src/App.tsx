@@ -10,7 +10,7 @@ function App() {
       {currentPage === 'welcome' ? (
         <WelcomePage onNext={() => setCurrentPage('form')} />
       ) : (
-        <FormPage />
+        <FormPage onBack={() => setCurrentPage('welcome')} />
       )}
     </>
   );

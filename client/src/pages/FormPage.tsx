@@ -14,7 +14,11 @@ interface FormErrors {
   general?: string;
 }
 
-export default function ContactForm() {
+interface ContactFormProps {
+  onBack: () => void;
+}
+
+export default function ContactForm({ onBack }: ContactFormProps) {
   const [formData, setFormData] = useState<MessageData>({
     name: '',
     phone: '',
@@ -117,6 +121,10 @@ export default function ContactForm() {
 
         <Button type="submit" fullWidth isLoading={isSubmitting}>
           Отправить
+        </Button>
+
+        <Button type="button" variant="secondary" fullWidth onClick={onBack}>
+          Назад
         </Button>
       </Form>
     </div>
