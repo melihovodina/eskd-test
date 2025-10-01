@@ -24,5 +24,18 @@ services:
     depends_on:
       - mongo
 
+  client:
+    build: ./client
+    container_name: eskd-client
+    ports:
+      - "8080:80"
+    environment:
+      - VITE_API_URL=${VITE_API_URL}
+      - VITE_API_URL_DEPLOY=${VITE_API_URL_DEPLOY}
+      - VITE_API_URL_DEV=${VITE_API_URL_DEV}
+      - VITE_MODE=prod
+    depends_on:
+      - server
+
 volumes:
   mongo-data:

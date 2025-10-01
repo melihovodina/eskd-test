@@ -4,10 +4,11 @@ export interface MessageData {
   message: string;
 }
 
+const MODE = import.meta.env.VITE_MODE || "";
 const API_URL =
-  import.meta.env.MODE === 'production'
+  MODE === 'prod'
     ? import.meta.env.VITE_API_URL || ""
-    : import.meta.env.MODE === 'deploy'
+    : MODE === 'deploy'
       ? import.meta.env.VITE_API_URL_DEPLOY || ""
       : import.meta.env.VITE_API_URL_DEV || "";
 
