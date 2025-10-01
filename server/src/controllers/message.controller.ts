@@ -7,7 +7,7 @@ export class MessageController {
     const { name, phone, message } = req.body;
     
     try {
-      await MessageService.createMsg(name, phone, message);
+      await MessageService.createMessage(name, phone, message);
     } catch (error: any) {
       console.error(error);
       res.status(500).json({ message: error.message || "Server error" });
